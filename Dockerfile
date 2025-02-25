@@ -8,4 +8,4 @@ COPY index.php /app/public/index.php
 WORKDIR /app/public
 
 # Jalankan FrankenPHP dalam mode worker
-CMD ["/frankenphp", "worker", "--config", "/app/public/index.php"]
+CMD ["php", "index.php"]
