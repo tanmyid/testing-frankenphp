@@ -1,11 +1,11 @@
 # Gunakan base image FrankenPHP
-FROM dunglas/frankenphp:1.4.4-php8.3-alpine
+FROM dunglas/frankenphp
 
 # Copy file index.php ke dalam container
-COPY index.php /app/public/index.php
+COPY index.php /app/index.php
 
-# Set working directory ke /app/public
-WORKDIR /app/public
+# Set working directory ke /app
+WORKDIR /app
 
-# Jalankan FrankenPHP dalam mode worker
-CMD ["php", "index.php"]
+# Jalankan mode worker menggunakan PHP CLI
+CMD ["php", "/app/index.php"]
